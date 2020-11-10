@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ClasesComponent implements OnInit {
 
   alerta: string = "alert-dark";
+  loading:boolean = false;
 
-  propiedades: Object = {
+   propiedades: object = {
     danger: false
 
   };
@@ -18,6 +19,10 @@ export class ClasesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  ejecutar(){
+    this.loading = true;
+    setTimeout (() => this.loading = false, 3000);
   }
 
 }
