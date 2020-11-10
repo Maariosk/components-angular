@@ -1,0 +1,18 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+    A simple danger alert—check it out!
+</div>
+
+<button type="button" class="btn btn-info" (click)="alerta='alert-info'">INFO</button>
+
+<button type="button" class="btn btn-warning" (click)="alerta='alert-warning'">WARNING</button>
+
+<button type="button" class="btn btn-dark" (click)="alerta='alert-dark'">DARK</button>
+
+<br>
+<br>
+
+<h3 [ngClass]="{'text-danger': propiedades.danger, 'text-info': !propiedades.danger}">
+    Hola mundo
+</h3>
+
+<button type="button" class="btn" (click)="propiedades.danger = !propiedades.danger" [ngClass]="{'btn-danger':propiedades.danger, 'btn-dark': !propiedades.danger}">Cambiar</button>
